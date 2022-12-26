@@ -1,39 +1,31 @@
-# node-docker
-Simple node and express docker 
+# node-mongo-docker
+A node and express docker template with Mongo
 
-# Docker Commands
+## Docker Commands
 
-### create docker image using Dockerfile
+### build image from docker compose
 ```
-docker build -t <image name> .
-eg: docker build -t bpst/simple-backend .
-```
-
-### view docker images
-```
-docker images
+docker compose build
 ```
 
-### remove docker image
+### run mongo container
 ```
-docker rmi <image id>
-eg: docker rmi 12301f222ac7
-```
-
-### run container from image
-```
-docker run -p <port container>:<port application> <image name>
-eg: docker run -p 4000:4000 bpst/simple-backend
+docker-compose up -d mongo
 ```
 
-### view running containers
+### run app container
 ```
-docker ps
-docker ps --all
+docker-compose up -d app
 ```
 
-### stop running container
+### check logs of container
 ```
-docker stop <running container id>
-eg: docker stop 4cf45ce35bfa
+docker logs <container id>
+eg: docker logs 9b7650bbc9a0
 ```
+
+### stop all running containers
+```
+docker-compose stop
+```
+
