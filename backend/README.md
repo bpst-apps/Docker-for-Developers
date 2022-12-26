@@ -26,37 +26,14 @@ docker run -p <port container>:<port application> <image name>
 eg: docker run -p 4000:4000 bpst/simple-backend
 ```
 
-### 
+### view running containers
+```
+docker ps
+docker ps --all
 ```
 
+### stop running container
 ```
-
-### 
-```
-
-```
-
-### 
-```
-
-```
-
-### 
-```
-
-```
-
-### 
-```
-
-```
-
-### 
-```
-
-```
-
-### 
-```
-
+docker stop <running container id>
+eg: docker stop 4cf45ce35bfa
 ```
